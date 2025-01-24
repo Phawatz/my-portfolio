@@ -17,6 +17,17 @@ import { useState, useEffect } from "react";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
 
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('darkMode');
+    if (storedTheme !== null) {
+      setDarkMode(JSON.parse(storedTheme));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('darkMode', JSON.stringify(darkMode));
+  }, [darkMode]);
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-gray-100 px-10 md:px-20 lg:px-40 dark:bg-gray-900 transition duration-300">
@@ -152,27 +163,28 @@ export default function Home() {
               <Image
                 src={web1}
                 alt=""
-                className="w-48 h-48 rounded-lg object-cover"
+                className="rounded-lg object-cover"
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
               />
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/3 flex-1 ">
               <Image
                 src={web2}
                 alt=""
-                className="w-48 h-48 rounded-lg object-cover"
+                className="rounded-lg object-cover"
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
+                
               />
             </div>
             <div className="basis-1/3 flex-1">
               <Image
                 src={web3}
                 alt=""
-                className="w-48 h-48 rounded-lg object-cover"
+                className="rounded-lg object-cover"
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
