@@ -48,13 +48,13 @@ export default function Home() {
                 )}
               </li>
               <li>
-                <a
+                {/*<a
                   className="bg-gradient-to-r from-orange-500 to-yellow-200 text-white px-4 py-2 rounded-full ml-8 hover:text-gray-800 transition duration-300"
                   href="/Phawat-Resume.pdf"
                   download="Phawat-Resume.pdf"
                 >
                   Resume
-                </a>
+                </a>*/}
               </li>
             </ul>
           </nav>
@@ -62,8 +62,8 @@ export default function Home() {
             <Image src={profile} alt="" className="w-80 h-80 rounded-full" />
           </div>
           <div className="text-center p-10">
-            <h2 className="text-4xl py-2 text-orange-500 font-medium md:text-6xl">
-              Phawat Phutharaporn
+            <h2 className="text-4xl py-2 text-orange-500 font-medium md:text-6xl ">
+              P.
             </h2>
             <h3 className="text-2xl py-2 md:3xl dark:text-white">
               Software Developer.
@@ -72,11 +72,11 @@ export default function Home() {
               I graduated from the Computer Science Department at Chiang Mai
               University and am looking for a job in a challenging environment
               that requires analytical and problem-solving skills. I'm
-              interested in Front-end, Back-end, Tester, and full-stack
+              interested in Front-end, Back-end, Tester, and Full-stack
               developers.
             </p>
           </div>
-          <div className="flex text-5xl justify-center gap-16 py-3 text-gray-600 dark:text-gray-300">
+          {/*<div className="flex text-5xl justify-center gap-16 py-3 text-gray-600 dark:text-gray-300">
             <a
               href="https://www.facebook.com/PhawatPhutharaporn/"
               target="_blank"
@@ -101,7 +101,7 @@ export default function Home() {
             >
               <AiFillLinkedin className="hover:text-orange-500 transition duration-300" />
             </a>
-          </div>
+          </div>*/}
         </section>
 
         <section>
